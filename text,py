@@ -1,0 +1,15 @@
+import re
+
+text = "I have cold and fever of age 20 in all ways"
+
+# Define the pattern to match the age
+pattern = r'age (\d+)'
+
+# Use regex to find the age
+match = re.search(pattern, text)
+
+if match:
+    age = match.group(1)
+    print("Age extracted:", age)
+else:
+    print("No age found in the text.")
